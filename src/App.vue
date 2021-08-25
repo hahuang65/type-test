@@ -1,15 +1,21 @@
 <template>
-  <div class="app">
-    Type Test
-  </div>
+  <h1>{{ state.appName }}</h1>
+  <Keyboard />
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, reactive } from 'vue';
+import Keyboard from "@/components/Keyboard.vue";
 
 export default defineComponent({
   name: 'App',
-  components: {
+  components: { Keyboard },
+  setup() {
+    const state = reactive({
+      appName: "Type Test"
+    })
+
+    return { state }
   }
 });
 </script>
