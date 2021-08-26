@@ -4,11 +4,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive } from 'vue';
+import { defineComponent, reactive } from "vue";
 import Keyboard from "@/components/Keyboard.vue";
 
 export default defineComponent({
-  name: 'App',
+  name: "App",
   components: { Keyboard },
   setup() {
     const state = reactive({
